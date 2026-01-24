@@ -1,21 +1,19 @@
 name: Semgrep
 
 on:
-  pull_request:
   push:
     branches: [ main, master ]
+  pull_request:
 
 jobs:
   semgrep:
-    name: Run Semgrep
     runs-on: ubuntu-latest
-
-    container:
-      image: returntocorp/semgrep
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Semgrep
+      - name: Run Semgrep CI
+        env:
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
         run: semgrep ci
