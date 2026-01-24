@@ -1,0 +1,47 @@
+# =========================
+# Semgrep full configuration
+# Node.js API (JS / TS)
+# =========================
+
+version: "1.0"
+
+# Global settings
+severity: WARNING
+
+# Paths configuration
+paths:
+  include:
+    - "**/*.js"
+    - "**/*.ts"
+  exclude:
+    - node_modules/
+    - dist/
+    - build/
+    - coverage/
+    - "**/*.test.js"
+    - "**/*.spec.js"
+    - "**/*.test.ts"
+    - "**/*.spec.ts"
+
+# Rulesets to run
+rulesets:
+  # Node.js core security rules
+  - p/nodejs
+
+  # Express / HTTP API rules
+  - p/expressjs
+
+  # General security issues
+  - p/security-audit
+
+  # OWASP Top 10 vulnerabilities
+  - p/owasp-top-ten
+
+# Output configuration
+output:
+  format: sarif
+
+# CI behavior
+ci:
+  fail-on:
+    - ERROR
