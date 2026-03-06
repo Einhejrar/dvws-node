@@ -5,7 +5,7 @@
 
 
 # dvws-node
-Damn Vulnerable Web Services is a vulnerable application with a web service and an API that can be used to learn about webservices/API related vulnerabilities.  This iment for https://github.com/snoopysecurity/dvws
+Damn Vulnerable Web Services is a vulnerable application with a web service and an API that can be used to learn about webservices/API related vulnerabilities.  This iment for https://github.com/snoopysecurdvws
 
 ![DVWS](https://github.com/snoopysecurity/Public/blob/master/dvws/dvws.png)
 
