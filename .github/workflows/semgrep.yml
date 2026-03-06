@@ -19,4 +19,4 @@ jobs:
       - name: Run Semgrep CI
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-        run: semgrep ci
+        run: semgrep ci --push
